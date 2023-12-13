@@ -9,10 +9,20 @@ window.onload = function () {
     }
 
 
+    let limpiar = document.querySelector(".limpiar")
     let texto = document.querySelector('.texto');
     let btnEncriptar = document.querySelector('.encriptar');
     let btnDesencriptar = document.querySelector('.desencriptar');
     let areaTexto = document.querySelector('#areaTexto');
+
+
+    limpiar.addEventListener('click', function () {
+
+      
+        texto.value = "";
+
+
+    })
 
 
     btnEncriptar.addEventListener('click', function () {
@@ -62,17 +72,17 @@ window.onload = function () {
 
         let palabra2 = palabra.value.toLowerCase()
 
-        let textoEncriptado = palabra2.replace(/ai/img,'a')
-        textoEncriptado = textoEncriptado.replace(/enter/img,'e')
-        textoEncriptado = textoEncriptado.replace(/imes/img,'i')
-        textoEncriptado = textoEncriptado.replace(/ober/img,'o')
-        textoEncriptado = textoEncriptado.replace(/ufat/img,'u')
+        let textoEncriptado = palabra2.replace(/ai/img, 'a')
+        textoEncriptado = textoEncriptado.replace(/enter/img, 'e')
+        textoEncriptado = textoEncriptado.replace(/imes/img, 'i')
+        textoEncriptado = textoEncriptado.replace(/ober/img, 'o')
+        textoEncriptado = textoEncriptado.replace(/ufat/img, 'u')
 
 
 
         areaTexto.textContent = textoEncriptado
 
-      
+
 
     }
 
